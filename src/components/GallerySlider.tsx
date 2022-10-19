@@ -82,7 +82,7 @@ const GallerySlider = () => {
   };
   return (
     <>
-      <div className="bg-gray-100 px-3 py-8 md:py-10 lg:py-14">
+      <div className="bg-gray-100 border overflow-x-hidden px-3 py-8 md:py-10 lg:py-14">
         <div className="rounded-div mb-8">
           <div className="text-black space-y-3 font-nunito lg:space-y-6">
             <h3 className="text-2xl font-bold text-center md:text-3xl lg:text-4xl">
@@ -94,7 +94,7 @@ const GallerySlider = () => {
         <div className="">
           <Slider className="overflow-x-clip" {...settings}>
             {foods.map((item) => (
-              <div className="overflow-hidden w-auto h-[220px] mx-0">
+              <div key={item.id} className="overflow-hidden w-auto h-[220px] mx-0">
                 <img
                   className="w-full h-full object-cover transition-all hover:scale-110"
                   src={item.url}

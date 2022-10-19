@@ -1,6 +1,3 @@
-import { useState } from "react";
-import React from "react";
-import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import Slider from "react-slick";
 
 type Food = {
@@ -134,7 +131,7 @@ const SpecialMenu = () => {
         <div className="">
           <Slider className="overflow-x-clip" {...settings}>
             {foods.map((item) => (
-              <div className="relative group overflow-hidden w-auto h-[500px]">
+              <div key={item.id} className="relative group overflow-hidden w-auto h-[500px]">
                 <div className="absolute w-full h-full top-0 left-0 bg-black/40"></div>
                 <div className="flex flex-col p-3 items-center justify-center absolute w-full h-full">
                   <h3 className="text-white text-4xl text-center font-bold">

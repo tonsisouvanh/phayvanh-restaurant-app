@@ -1,13 +1,19 @@
-import React from "react";
 import "./App.css";
-import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Home />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/admin/login" element={<Login />}></Route>
+          <Route path="/admin" element={<Dashboard />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
