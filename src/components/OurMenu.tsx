@@ -42,92 +42,92 @@ const foods: Food[] = [
   },
 ];
 
-interface CustomArrow {
-  className: string;
-  style: object;
-  onClick: React.MouseEventHandler<HTMLElement>;
-}
+// interface CustomArrow {
+//   className: string;
+//   style: object;
+//   onClick: React.MouseEventHandler<HTMLElement>;
+// }
 
 function OurMenu() {
-  function SampleNextArrow(props: CustomArrow) {
-    const { className, style, onClick } = props;
+  // function SampleNextArrow(props: CustomArrow) {
+  //   const { className, style, onClick } = props;
 
-    return (
-      <div
-        className={className}
-        style={{
-          ...style,
-          display: "absolute",
-          backgroundColor: "transparent",
-          right: "0",
-          top: "0",
-          zIndex: 10,
-          opacity: "0.8",
-        }}
-        onClick={onClick}
-      >
-        <MdChevronRight size={50} className="" color={"white"} />
-      </div>
-    );
-  }
+  //   return (
+  //     <div
+  //       className={className}
+  //       style={{
+  //         ...style,
+  //         display: "absolute",
+  //         backgroundColor: "transparent",
+  //         right: "0",
+  //         top: "0",
+  //         zIndex: 10,
+  //         opacity: "0.8",
+  //       }}
+  //       onClick={onClick}
+  //     >
+  //       <MdChevronRight size={50} className="" color={"white"} />
+  //     </div>
+  //   );
+  // }
 
-  function SamplePrevArrow(props: CustomArrow) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{
-          ...style,
-          display: "absolute",
-          backgroundColor: "transparent",
-          left: "-10px",
-          top: "40%",
-          zIndex: 10,
-          opacity: "0.8",
-        }}
-        onClick={onClick}
-      >
-        <MdChevronLeft size={50} className="" color={"white"} />
-      </div>
-    );
-  }
+  // function SamplePrevArrow(props: CustomArrow) {
+  //   const { className, style, onClick } = props;
+  //   return (
+  //     <div
+  //       className={className}
+  //       style={{
+  //         ...style,
+  //         display: "absolute",
+  //         backgroundColor: "transparent",
+  //         left: "-10px",
+  //         top: "40%",
+  //         zIndex: 10,
+  //         opacity: "0.8",
+  //       }}
+  //       onClick={onClick}
+  //     >
+  //       <MdChevronLeft size={50} className="" color={"white"} />
+  //     </div>
+  //   );
+  // }
 
-  var settings: object = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    // nextArrow: <SampleNextArrow className="" style={{}} onClick={() => {}} />,
-    // prevArrow: <SamplePrevArrow className="" style={{}} onClick={() => {}} />,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-    ],
-  };
+  // var settings: object = {
+  //   dots: true,
+  //   infinite: false,
+  //   speed: 500,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 4,
+  //   initialSlide: 0,
+  //   // nextArrow: <SampleNextArrow className="" style={{}} onClick={() => {}} />,
+  //   // prevArrow: <SamplePrevArrow className="" style={{}} onClick={() => {}} />,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 3,
+  //         infinite: true,
+  //         dots: true,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 600,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //         initialSlide: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //       },
+  //     },
+  //   ],
+  // };
 
   return (
     <div className="relative bg-menu-background w-full bg-cover bg-no-repeat">
@@ -144,7 +144,7 @@ function OurMenu() {
 
           {/* slider */}
           <div className="space-y-5">
-            <ul className="flex mb-10 items-center justify-center gap-5 md:gap-14 lg:gap-20 md:text-lg">
+            <ul className="flex flex-col gap-3 mb-10 items-center justify-center sm:flex-row sm:gap-5 md:gap-14 lg:gap-20 md:text-lg">
               <li className="cursor-pointer font-bold text-white bg-yellow-500 py-1 px-3 rounded-full hover:text-gray-200">
                 Breakfast
               </li>
