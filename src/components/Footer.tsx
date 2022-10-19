@@ -1,4 +1,3 @@
-import React from "react";
 import { TiSocialInstagram } from "react-icons/ti";
 import { BsFacebook, BsFillTelephoneFill, BsTwitter } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";

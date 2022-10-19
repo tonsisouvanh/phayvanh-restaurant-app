@@ -1,4 +1,3 @@
-import React from "react";
 import { IoCallSharp } from "react-icons/io5";
 
 const About = () => {

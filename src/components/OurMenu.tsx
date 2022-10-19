@@ -1,6 +1,4 @@
 import React from "react";
-import menubg from "../assets/images/menu-bg.png";
-import Slider from "react-slick";
 import { CgShoppingCart } from "react-icons/cg";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
@@ -178,7 +176,7 @@ function OurMenu() {
             {/* Grid menu */}
             <div className="grid grid-cols-1 gap-6 grid-flow-row sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {foods.map((item) => (
-                <div className="overflow-hidden rounded-xl bg-[#232830] border-white border-2 transition-all hover:scale-[1.03]">
+                <div key={item.id} className="overflow-hidden rounded-xl bg-[#232830] border-white border-2 transition-all hover:scale-[1.03]">
                   <div className="w-auto border-b-8 border-yellow-500 h-[300px] lg:h-[230px] overflow-hidden rounded-bl-[4rem]">
                     <img className="w-full h-full object-cover" src={item.url} alt="" />
                   </div>
